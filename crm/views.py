@@ -4,4 +4,4 @@ from .models import Order
 def firs_page(request):
     object_list = Order.objects.all() # mdul ichida hamma queriset malumotlarni ol diyapmiz
     context = {'object_list':object_list}
-    return render(request, 'index.html',context)
+    return  render(request,'./index.html',context)
