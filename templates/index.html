@@ -8,14 +8,23 @@
 </head>
 <body>
     <h1> Crm tizimga hush kelibsiz</h1>
-    {{object_list}}
-    
-    {% for obj in object_list %}
-    <h2>{{obj.id}}<h2>
-    <h2>{{obj.order_dt}}</h2>
-    <h2>{{obj.order_name}}</h2>
-    <h2>{{obj.order_phone}}</h2>
-      
-    {% endfor %}
+  
+    <table border="1"> 
+        <tr>
+            <th>id</th>
+            <th>Sana</th>
+            <th>Ism</th>
+            <th>Telefon</th>
+        </tr>
+        {% for obj in object_list %}
+        <tr>
+            <th>{{obj.id}}</th>
+            <th>{{obj.order_dt}}</th>
+            <th>{{obj.order_name}}</th>
+            <th>{{obj.order_phone}}</th>
+        </tr>
+        {% endfor %}
+
+    </table>
 </body>
 </html>
