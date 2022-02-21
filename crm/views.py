@@ -1,3 +1,4 @@
+from ssl import HAS_TLSv1_2
 from django.shortcuts import render
 from .models import Order
 # Create your views here.

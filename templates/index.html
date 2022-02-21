@@ -9,5 +9,13 @@
 <body>
     <h1> Crm tizimga hush kelibsiz</h1>
     {{object_list}}
+    
+    {% for obj in object_list %}
+    <h2>{{obj.id}}<h2>
+    <h2>{{obj.order_dt}}</h2>
+    <h2>{{obj.order_name}}</h2>
+    <h2>{{obj.order_phone}}</h2>
+      
+    {% endfor %}
 </body>
 </html>
