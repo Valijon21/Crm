@@ -10,5 +10,8 @@ def firs_page(request):
 
 
 def thanks(request):
+    name = request.GET['name']
+    phone = request.GET['phone']
     
-    return render(request, './thanks.html')
+    return  render(request,'./thank.html',{'name':name,
+                                           'phone':phone})
