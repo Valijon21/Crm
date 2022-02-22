@@ -13,7 +13,7 @@
    
    <form action="{% url 'thanks'%}" method="POST"> 
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         <button type="submit">Junatish</button>
    </form>
    
