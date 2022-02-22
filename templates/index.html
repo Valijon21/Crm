@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% block title%} taytle indeks {% endblock %}
+
+{% load static %}
 {% block content %}
 <h1>indeksdan maumotlar</h1>
+<img src="{% static 'img\1.jpeg' %}" height = "300" >
+{% include 'index_old.html'  %}
 
-{% include 'index_old.html' %}
+
 
 {% endblock %}
