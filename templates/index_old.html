@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crm sistema</title>
+</head>
+<body>
+    <h1> Crm tizimga hush kelibsiz</h1>
+   
+   
+   
+   <form action="{% url 'thanks'%}" method="POST"> 
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Junatish</button>
+   </form>
+   
+   
+   
+   
+       
+   
+     
+   <hr>
+   <br>
+    {% if object_list %}
+    <table border="1"> 
+        <tr>
+            <th>id</th>
+            <th>Sana</th>
+            <th>Ism</th>
+            <th>Telefon</th>
+        </tr>
+    {% for obj in object_list %}
+        <tr>
+            <th>{{obj.id}}</th>
+            <th>{{obj.order_dt}}</th>
+            <th>{{obj.order_name}}</th>
+            <th>{{obj.order_phone}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    Malumot yuq
+    {% endif %}
+</body>
+</html>
