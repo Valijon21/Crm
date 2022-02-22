@@ -11,7 +11,8 @@
    
    
    
-   <form action="{% url 'thanks'%}" >
+   <form action="{% url 'thanks'%}" method="POST"> 
+        {% csrf_token %}
        <label>Ismi</lable>
         <input name="name">
         <label>Telefoni</label>
@@ -22,21 +23,11 @@
    
    
    
+    
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+     
+   <hr>
    <br>
     {% if object_list %}
     <table border="1"> 

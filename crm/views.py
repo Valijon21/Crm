@@ -10,8 +10,8 @@ def firs_page(request):
 
 
 def thanks(request):
-    name = request.GET['name']
-    phone = request.GET['phone']
+    name = request.POST['name']
+    phone = request.POST['phone']
     element_sav = Order(order_name = name, order_phone = phone)
     element_sav.save()
     return  render(request,'./thank.html',{'name':name,
