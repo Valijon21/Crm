@@ -13,18 +13,14 @@
    
    <form action="{% url 'thanks'%}" method="POST"> 
         {% csrf_token %}
-       <label>Ismi</lable>
-        <input name="name">
-        <label>Telefoni</label>
-        <input name="phone">
+        {{ form }}
         <button type="submit">Junatish</button>
    </form>
    
    
    
    
-    
-   
+       
    
      
    <hr>
